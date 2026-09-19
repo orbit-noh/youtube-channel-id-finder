@@ -61,3 +61,13 @@ SOP와 CORS는 브라우저의 정책이므로 Worker와 YouTube 간의 서버 �
 ## API
 
 클라이언트인 웹사이트와 Work 간 요청 형식 및 응답 코드는 [API 문서](docs/API.md)에서 확인할 수 있습니다.
+
+## Screenshots
+
+### Mobile
+
+![Mobile screenshot](docs/screenshots/mobile.png)
+
+### Tablet
+
+![Tablet screenshot](docs/screenshots/tablet.png)
