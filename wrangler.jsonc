@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "youtube-channel-id-finder",
+  "main": "./src/js/worker.js",
+  "compatibility_date": "2026-09-19",
+  "assets": {
+    "directory": "./dist",
+    "run_worker_first": ["/api"],
+  },
+}

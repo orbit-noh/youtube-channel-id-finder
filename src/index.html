@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a YouTube Channel ID</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- // Google Font - Manrope -->
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">
+      <span
+        class="theme-toggle__icon theme-toggle__icon--moon"
+        data-lucide="moon"
+        aria-hidden="true"
+      ></span>
+      <span
+        class="theme-toggle__icon theme-toggle__icon--sun"
+        data-lucide="sun"
+        aria-hidden="true"
+      ></span>
+    </button>
+
+    <main class="page">
+      <header class="page__header">
+        <h1 class="page__title">Find Youtube <br class="mobile-only" />Channel ID</h1>
+
+        <p class="page__description">
+          Paste Youtube channel or video URL
+          <br class="mobile-only" />
+          to find the channel ID.
+        </p>
+      </header>
+
+      <form class="search" method="get">
+        <input class="search__input" type="text" name="url" placeholder="Paste YouTube URL" />
+        <button class="search__submit">Find Channel ID</button>
+      </form>
+
+      <section class="result" aria-live="polite" hidden>
+        <div class="result__message result__message--success" hidden>
+          <header class="result__header">
+            <span class="result__status-icon" data-lucide="circle-check" aria-hidden="true"></span>
+            <h2 class="result__title">Success</h2>
+          </header>
+
+          <span class="result__channel-id"></span>
+
+          <button class="result__copy">
+            <span class="result__copy-icon result__copy-icon--copy" data-lucide="copy" aria-hidden="true"></span>
+            <span class="result__copy-icon result__copy-icon--check" data-lucide="check" aria-hidden="true"></span>
+            <span class="result__copy-label">Copy URL</span>
+          </button>
+        </div>
+
+        <div class="result__message result__message--warning" hidden>
+          <header class="result__header">
+            <span class="result__status-icon" data-lucide="circle-alert" aria-hidden="true"></span>
+            <h2 class="result__title">Invalid URL</h2>
+          </header>
+
+          <p class="result__description">Enter a valid YouTube channel or video URL</p>
+        </div>
+
+        <div class="result__message result__message--error" hidden>
+          <header class="result__header">
+            <span class="result__status-icon" data-lucide="circle-x" aria-hidden="true"></span>
+            <h2 class="result__title">Error</h2>
+          </header>
+
+          <p class="result__description">Something went wrong — please try again</p>
+        </div>
+      </section>
+
+      <div class="divider">or</div>
+
+      <section class="examples">
+        <h2 class="examples__title">Try an example</h2>
+        <ul class="examples__list">
+          <li class="examples__item">
+            <button class="examples__button">
+              <span class="examples__avatar">
+                <span class="examples__avatar-icon" data-lucide="user" aria-hidden="true"></span>
+              </span>
+              <span class="examples__details">
+                <span class="examples__label">Channel URL</span>
+                <span class="examples__value">youtube.com/@MrBeast</span>
+              </span>
+              <span class="examples__chevron" data-lucide="chevron-right" aria-hidden="true"></span>
+            </button>
+          </li>
+
+          <li class="examples__item">
+            <button class="examples__button">
+              <span class="examples__avatar">
+                <span
+                  class="examples__avatar-icon"
+                  data-lucide="square-play"
+                  aria-hidden="true"
+                ></span>
+              </span>
+              <span class="examples__details">
+                <span class="examples__label">Video URL</span>
+                <span class="examples__value">youtube.com/watch?v=0e3GPea1Tyg</span>
+              </span>
+              <span class="examples__chevron" data-lucide="chevron-right" aria-hidden="true"></span>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
